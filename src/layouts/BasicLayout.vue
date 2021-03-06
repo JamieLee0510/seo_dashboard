@@ -9,17 +9,23 @@
         v-model="collapsed"
         width="256px"
       >
-        <div class="logo">Ant Design Pro</div>
         <SiderMenu :theme="navTheme" />
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
-          <a-icon
-            class="trigger"
-            :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-            @click="collapsed = !collapsed"
-          ></a-icon>
-          <Header />
+          <a-row>
+            <a-col :xs="10" :sm="7" :md="9" :xl="10">
+              <a-icon
+                class="trigger"
+                :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+                @click="collapsed = !collapsed"
+              ></a-icon> </a-col
+            ><a-col :xs="14" :sm="17" :md="15" :xl="14">
+              <div style="font-size:40px">
+                SEO Report
+              </div>
+            </a-col>
+          </a-row>
         </a-layout-header>
         <a-layout-content style="margin: 0 16px">
           <router-view></router-view>
@@ -34,7 +40,6 @@
 </template>
 
 <script>
-import Header from "./Header";
 import SiderMenu from "./SiderMenu";
 import Footer from "./Footer";
 import SettingDrawer from "../components/SettingDrawer";
@@ -54,7 +59,6 @@ export default {
   },
   //要先註冊才能使用
   components: {
-    Header,
     Footer,
     SiderMenu,
     SettingDrawer
@@ -70,14 +74,5 @@ export default {
 }
 .trigger :hover {
   background: #eeeeee;
-}
-.logo {
-  height: 64px;
-  line-height: 64px;
-  text-align: center;
-  overflow: hidden;
-}
-.nav-theme-dark >>> .logo {
-  color: #ffffff;
 }
 </style>

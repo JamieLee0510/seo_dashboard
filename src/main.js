@@ -10,8 +10,11 @@ import {
   Radio,
   Menu,
   Form,
-  Input
+  Input,
+  Select
 } from "ant-design-vue";
+import { Row, Col } from "ant-design-vue/lib/grid";
+
 // import "ant-design-vue/lib/button/style";
 
 Vue.config.productionTip = false;
@@ -25,6 +28,9 @@ Vue.use(Radio);
 Vue.use(Menu);
 Vue.use(Form);
 Vue.use(Input);
+Vue.use(Select);
+Vue.component(Row.name, Row);
+Vue.component(Col.name, Col);
 
 new Vue({
   router,

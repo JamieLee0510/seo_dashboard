@@ -1,5 +1,5 @@
 <template>
-  <div>Ant Design Vue ©2019 Created by Ding testing in GeekTime</div>
+  <div>©2021 Created by DING</div>
 </template>
 
 <script>
