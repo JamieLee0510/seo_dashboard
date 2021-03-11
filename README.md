@@ -6,6 +6,8 @@
 可利用 selector 選擇月份，畫面展示 SEO data（Echart）
 ```
 
+### Demo [link](https://lidingyu0510.github.io/seo_dashboard/)
+
 ## Project setup
 
 ```
